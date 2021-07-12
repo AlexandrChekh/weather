@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block">
+    <div>
+    <input type="text" class="search">
+    </div>
+    <div class="cityName">Krasnodar</div>
+    <div class="temperature">5&deg;</div>
+    <div class="weather">clouds</div>
+    <div class="icon" >no icon</div>
+    </div>
+    <div>
+        <p>Город на карте!</p>
+    </div>
+    <div id="map" style="width: 600px; height: 400px"></div>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=69e8faa3-2fbb-4bdc-a9db-16069cdd8f58&lang=ru_RU" type="text/javascript"></script>
+   <script type="text/javascript">
+    ymaps.ready(init);
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+        });
+    }
+</script>
+    <script src="script.js"></script>
+</html>
